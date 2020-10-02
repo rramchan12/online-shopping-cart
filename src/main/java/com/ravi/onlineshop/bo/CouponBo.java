@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
-public class DiscountBo {
+public class CouponBo {
 
     @Autowired
     DiscountCouponRepository discountCouponRepository;

@@ -46,13 +46,13 @@ public class CartBo {
      */
     public List<OrderDetails> getShoppingCart(int customerId) {
             List<OrderDetails> cart = new ArrayList<>();
-            log.debug("Get Shopping Cart called for CustomerId "+customerId);
+            log.info("Get Shopping Cart called for CustomerId "+customerId);
             int cart_id=  this.getCustomerOrderId(customerId);
             if (cart_id!= -1){
                 cart = ordersDetailsRepository.findById(cart_id);
             }
             else{
-                log.debug("No Cart Found for Customer Id "+customerId);
+                log.info("No Cart Found for Customer Id "+customerId);
             }
             return cart;
     }
