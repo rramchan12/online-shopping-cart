@@ -1,9 +1,8 @@
-package com.ravi.onlineshop.calculator;
+package com.ravi.onlineshop.couponengine;
 
 import com.ravi.onlineshop.bo.component.BaseOrderBo;
 import com.ravi.onlineshop.model.OrderDetails;
 import com.ravi.onlineshop.model.Orders;
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.ravi.onlineshop.bo;
 
 
 import com.ravi.onlineshop.bo.component.BaseOrderBo;
-import com.ravi.onlineshop.calculator.factory.CouponDiscountFactory;
+import com.ravi.onlineshop.couponengine.factory.CouponDiscountFactory;
 import com.ravi.onlineshop.model.OrderDetails;
 import com.ravi.onlineshop.model.Orders;
 import com.ravi.onlineshop.repository.OrdersRepository;

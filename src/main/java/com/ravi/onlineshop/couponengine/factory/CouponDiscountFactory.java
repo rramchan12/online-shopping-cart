@@ -1,7 +1,7 @@
-package com.ravi.onlineshop.calculator.factory;
+package com.ravi.onlineshop.couponengine.factory;
 
 import com.ravi.onlineshop.bo.component.BaseOrderBo;
-import com.ravi.onlineshop.calculator.SalesCouponDecorator;
+import com.ravi.onlineshop.couponengine.SalesCouponDecorator;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
