@@ -19,11 +19,15 @@ public class SalesCouponDecorator extends BaseCouponCalculator {
     public int calculateCouponDiscount() {
         //Apply discount rules
         List<OrderDetails> orderDetail = orderBo.getOrderDetails();
+        int discount=0;
         Orders order = orderBo.getOrders();
 
         log.info("SalesDiscountDecorator : Calculating Discount for OrderId {}", order.getOrderId());
-        return 3;
+        if (order.getTotal() > 3000)
+            discount= order.getDiscountCouponValue() + 10;
+        else if (order.getTotal() < 1000)
+            discount= order.getDiscountCouponValue() + 5;
+
+        return discount;
     }
-
-
 }

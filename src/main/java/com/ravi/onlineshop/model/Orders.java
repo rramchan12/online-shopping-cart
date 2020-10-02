@@ -26,7 +26,7 @@ public class Orders {
     private Date orderDate;
     private int status; //0 = NOT_PLACED 1=PLACED
     private double total;
-    private int discount_coupon_code;
+    private int discountCouponValue;
 
 
 }

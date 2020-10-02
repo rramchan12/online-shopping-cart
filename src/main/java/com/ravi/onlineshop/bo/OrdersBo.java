@@ -65,7 +65,7 @@ public class OrdersBo  extends BaseOrderBo {
         this.order = order;
         this.orderDetails = orderDetails;
         int coupon = calculateCouponDiscount();
-        order.setDiscount_coupon_code(coupon);
+        order.setDiscountCouponValue(coupon);
         ordersRepository.save(order);
 
         return orderDetailsBo.findOrdersDetailsByOrderId(orderId);
@@ -78,6 +78,7 @@ public class OrdersBo  extends BaseOrderBo {
      * For a Given Order, evaluate and Get a DiscountCoupon
      */
     public int calculateCouponDiscount(){
+
 
         //Factory Class to Call on Discounting
          BaseOrderBo decorator = CouponDiscountFactory.getCouponCalculator(CouponDiscountFactory.TYPE.SALES_DISCOUNT_TYPE, this);

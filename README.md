@@ -48,3 +48,41 @@ Response :
     }
 ]
 ```
+
+### 2) View Cart
+
+URL: `GET /api/{version}/cart/customer/{customerID}`
+
+Example: `GET /api/v1/cart/customer/3`
+
+Response:
+
+``` Java
+[
+  {
+    "orderDetailsId": 1,
+    "orderId": 1,
+    "itemNbr": 1111,
+    "quantity": 1
+  }
+]
+```
+
+### 2) Place Order
+
+URL: `PUT /api/{version}/order/{orderId}`
+
+Example: `PUT /api/v1/order/1`
+
+Response:
+
+``` Java
+[
+  {
+    "orderDetailsId": 1,
+    "orderId": 1,
+    "itemNbr": 1111,
+    "quantity": 1
+  }
+]
+```
