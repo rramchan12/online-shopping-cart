@@ -24,7 +24,7 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         Contact contact = new Contact("Ravi Skill Build Team",
-                "https://gecgithub01.walmart.com/riyenga/skillbite-shopping-cart",
+                "https://github.com/rramchan12/online-shopping-cart",
                 null);
         return new ApiInfoBuilder()
                 .title("Shopping Cart with Configurable Discount Engine")
