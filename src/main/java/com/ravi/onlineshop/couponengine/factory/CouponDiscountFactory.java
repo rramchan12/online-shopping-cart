@@ -1,7 +1,7 @@
 package com.ravi.onlineshop.couponengine.factory;
 
 import com.ravi.onlineshop.bo.component.BaseOrderBo;
-import com.ravi.onlineshop.couponengine.SalesCouponDecorator;
+import com.ravi.onlineshop.couponengine.SalesCouponCalculator;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -15,7 +15,7 @@ public class CouponDiscountFactory {
     public static BaseOrderBo getCouponCalculator(TYPE type, BaseOrderBo baseOrderBo){
         if (type==TYPE.SALES_DISCOUNT_TYPE) {
             log.info("Returning Sales Coupon Decorator");
-            return new SalesCouponDecorator(baseOrderBo);
+            return new SalesCouponCalculator(baseOrderBo);
         }
         else if (type==TYPE.ITEM_DISCOUNT_TYPE)
             throw new UnsupportedOperationException();

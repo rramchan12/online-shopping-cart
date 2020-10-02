@@ -21,6 +21,16 @@ You need to seed data into the database using the irrigation script. Please refe
 ## ER Model
 ![ER Shopping Cart](ER-Shopping-Cart.png)
 
+## Implementation Notes
+
+ - The Architecture is Split to the standard BOs, Controllers, Models and Repository Pattern
+ - Backend is ORM and implementeted in JPA
+ - For the Coupon Engine a Combination of Factory and Decorators is used
+ - Opinionated Defaut First Methodology is used
+ - Annotation are extensively used to augment customisation
+
+![Class Diagram](CouponDiscountFactory.png)
+
 ## Tests
 The API provides a set of REST end-points :
 ### 1) View Available Items
