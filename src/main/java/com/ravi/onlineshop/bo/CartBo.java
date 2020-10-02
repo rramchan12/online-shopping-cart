@@ -67,7 +67,7 @@ public class CartBo {
         return ordersRepository.findByCustomerId(customerId)
                 .stream()
                 .filter(orders -> orders.getStatus() ==0)
-                .map(Orders::getOrder_id)
+                .map(Orders::getOrderId)
                 .findAny()
                 .orElse(-1);
     }

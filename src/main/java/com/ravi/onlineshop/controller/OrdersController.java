@@ -3,14 +3,13 @@ package com.ravi.onlineshop.controller;
 import com.ravi.onlineshop.bo.ItemBo;
 import com.ravi.onlineshop.bo.OrdersBo;
 import com.ravi.onlineshop.model.Item;
+import com.ravi.onlineshop.model.OrderDetails;
 import com.ravi.onlineshop.model.Orders;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,11 +34,11 @@ public class OrdersController {
     }
 
 
-    @ApiOperation(value ="Get Order Information for Order Id", notes="For a Order ID get all the Orders, provided Customer Id Exists")
-    @GetMapping("{orderId}")
-    Orders getByOrderId(@ApiParam(value="Order Id" , required=true) @PathVariable("orderId")
-                                         int orderId){
-        return ordersBo.findOrdersByOrderId(orderId);
+    @ApiOperation(value = "Place Order", notes = "Assumption is that the order ID exists")
+    @PutMapping("{orderId}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public List<OrderDetails> placeOrder(@ApiParam(value = "Order ID", required = true) @PathVariable("orderId") int orderId) {
+        return ordersBo.placeOrder(orderId);
     }
 
 }

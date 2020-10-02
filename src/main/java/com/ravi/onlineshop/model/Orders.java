@@ -20,7 +20,7 @@ import java.util.Date;
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int order_id;
+    private int orderId;
     private int customerId;
     private String deliveryAddress;
     private Date orderDate;

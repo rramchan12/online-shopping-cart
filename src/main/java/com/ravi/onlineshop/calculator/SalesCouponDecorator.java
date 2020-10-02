@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Slf4j
-
 public class SalesCouponDecorator extends BaseCouponCalculator {
 
 
@@ -23,8 +22,8 @@ public class SalesCouponDecorator extends BaseCouponCalculator {
         List<OrderDetails> orderDetail = orderBo.getOrderDetails();
         Orders order = orderBo.getOrders();
 
-        log.debug("SalesDiscountDecorator : Calculating Discount for OrderId {}", order);
-        return orderBo.calculateCouponDiscount();
+        log.info("SalesDiscountDecorator : Calculating Discount for OrderId {}", order.getOrderId());
+        return 3;
     }
 
 
