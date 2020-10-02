@@ -19,8 +19,8 @@ import javax.persistence.Id;
 public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int order_details_id;
-    private int order_id;
-    private int item_nbr;
+    private int orderDetailsId;
+    private int orderId;
+    private int itemNbr;
     private int quantity;
 }

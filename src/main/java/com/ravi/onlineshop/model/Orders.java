@@ -17,11 +17,11 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int order_id;
-    private int customer_id;
+    private int customerId;
     private String deliveryAddress;
     private Date orderDate;
     private int status; //0 = NOT_PLACED 1=PLACED

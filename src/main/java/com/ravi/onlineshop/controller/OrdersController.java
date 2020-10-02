@@ -11,17 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/items")
+@RequestMapping("api/v1/orders")
 public class OrdersController {
 
     @Autowired
     ItemBo itemBo;
 
-    @GetMapping
-    @ApiOperation(value = "View Items List", notes = "View All Items")
-    public List<Item> getByCustomerId(){
-        return itemBo.viewItems();
-    }
+
 
 
 
