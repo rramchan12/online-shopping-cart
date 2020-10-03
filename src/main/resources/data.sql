@@ -28,5 +28,5 @@ INSERT INTO order_details(order_details_id, order_id, item_nbr, quantity) values
 INSERT INTO order_details(order_details_id, order_id, item_nbr, quantity) values
 (3,2,2222,1);
 
-INSERT INTO discount_coupon(coupon_id, child_coupon_id,  field_category, field_name, condition, value, coupon_value) values
-(1, -1, 'ORDERS','TOTAL', 'GREATER_THAN', 3000, '10');
+INSERT INTO discount_coupon(coupon_id, child_coupon_id,  field_category, field_name, condition, value, coupon_calculator_code) values
+(1, -1, '*','*', '*', 0, 'SALES_DISCOUNT_TYPE' );

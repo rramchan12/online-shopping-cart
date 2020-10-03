@@ -23,10 +23,12 @@ public class DiscountCoupon {
     //For now we will keep it simple
     private int child_coupon_id;
 
-    //This should be part of Either Orders, Item
+    //Filter out which Orders this Coupon Category Applies to
+    //For now ORDER, ITEM or *
     private String field_category;
 
-    //This should be a field of Orders, Item
+    //A Subfilter to further drill down on specific field
+    //Eg ITEM = "Sandals"
     private String field_name;
     //The Value of the field
     //TODO There should also be a field called DataType so that proper casting can be done
@@ -35,7 +37,7 @@ public class DiscountCoupon {
     //TODO Right now we will keep it simple and not take >= and other conditions
     private String condition;
 
-    //The discount that can possibly be given on the same
-    private int coupon_value;
+    //The Decorator that applies for Detailed Calculation
+    private String coupon_calculator_code;
 
 }

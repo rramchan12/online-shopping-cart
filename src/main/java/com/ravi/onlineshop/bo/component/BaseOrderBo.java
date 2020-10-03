@@ -6,6 +6,11 @@ import com.ravi.onlineshop.model.Orders;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The Component Class for the Decorator
+ * This class holds all the information required to calculate the Discount
+ *
+ */
 public abstract class BaseOrderBo {
 
 
